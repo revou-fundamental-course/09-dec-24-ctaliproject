@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Tampilan</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+  <style>
+    *{
+        box-sizing: border-box;
+    }
+
+    .headline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-left {
+  width: 60%;
+  padding: 20px;
+  margin-left: 35px;
+}
+
+.form-right {
+  width: 40%;
+  padding: 45px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #EDF0F4;
+  height: 70%;
+  border: 0px solid red;
+  border-radius: 10px;
+  
+}
+
+.form-right > * {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Gaya tambahan untuk menyesuaikan tampilan */
+/* Contoh: */
+img#content {
+  width: 325px;
+  height: 250px;
+}
+
+img.logo {
+    width: 30px;
+    height: 30px;
+}
+
+figcaption {
+    font-family: 'Open Sans', serif;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.content-comment {
+    margin-left: 10px;
+}
+
+.profile {
+    display: flex;
+    padding-top: 30px;
+}
+
+.profile > * {
+    margin-left: 20px;
+}
+
+.detail_profile {
+    margin-left: 10px;
+}
+
+div.line {
+    padding: 30px;
+}
+
+hr.line {
+    border: 1px solid #888;
+    border-width: 1px;
+    width: 25%;
+    margin:auto ;
+    border-radius: 5px;
+}
+
+
+
+#service_content {
+    background-color: aquamarine;
+}
+
+ol {
+  counter-reset: item;
+  padding-left: 30px; /* Sesuaikan jarak dari teks */
+}
+
+ol li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 30px; /* Jarak antar item */
+  padding-left: 60px; /* agar content dari <li> tidak bertabrakan dengan bulat */
+}
+
+ol li::before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  top: -5px; /* Sesuaikan posisi vertikal */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #f0f0f0; /* Warna latar belakang bulatan */
+  color: #333;
+  text-align: center;
+  align-content: center; /* menengahkan posisi angka pada bulat */
+  line-height: 20px;
+  font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.bagian_form {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bagian_form input, .bagian_form select, .form-right button {
+    padding: 11px;
+    margin-bottom: 10px;
+    radius: 20px;
+    border: 1px solid #C9D3DD;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.form-right button {
+    border: none;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.form-right label {
+    font-size: small;
+    font-weight:bold;
+}
+
+/* Sesuaikan gaya lainnya sesuai kebutuhan */
+  </style>
+</head>
+<body>
+  <div class="headline">
+
+    <div class="content-left">
+        <div>
+            <img id="content" src="travel-agent.webp" alt="Gambar">
+            <div class="content-comment"> 
+                <figcaption> "Liburan jadi menyenangkan bersama Travel Agentku."" </figcaption>
+                <div class="profile" >
+                    <img class="logo" src="profile-picture.png">
+                    <div class="detail_profile"> 
+                        <section style="font-weight: bold;">Florence Hughes</section>
+                        <section style="font-style:italic; font-size:small">Ibu Rumah Tangga, 28</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"> 
+            <hr class="line"> 
+        </div>
+        
+        <div>
+            <p style="font-weight: bold;">Use this space to provide users with more information about your offer. Consider it a follow-up to your headline and explain the benefits of your service or product.</p>
+            
+            <div>
+                <ol>
+                    <li>ttestsdfakhfst</li>
+                    <li>t</li>
+                    <li>t</li>
+                  </ol>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-right">
+      <h2 style="margin-bottom: 0px;">Contact Us</h2>
+      <p>Sales akan menghubungi Anda 1x24 jam setelah data kami terima.</p>
+      <form>
+        <div class="bagian_form"> 
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <div class="bagian_form"> 
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="bagian_form"> 
+            <label for="interest">What are you interested in?</label>
+            <select id="interest" name="interest">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+            </select>
+        </div>
+
+        <button type="submit"> SEND</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>

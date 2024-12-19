@@ -1,0 +1,128 @@
+/* ----------------------------------------------------------------------------------------------- UNIVERSAL SET ------------------------------------------------------------------------------------------------ */
+* {
+   box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ------------------------------------------------------------------------------------------------ Mode Potrait ---------------------------------------------------------------------------------------------------- */
+@media (orientation: portrait) {
+    
+    
+    .container {
+      width: 90%;
+    }
+  
+    .header {
+      text-align: center;
+    }
+  
+    .sidebar {
+      width: 25%;
+      float: left;
+    }   
+  
+    .content {
+      width: 75%;
+      float: right;
+    }
+  }
+
+body{
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------------------------------ Image logo RevoU pada Navbar ------------------------------------------------------------------------------------- */
+.navbar > a > img {
+    float: left;
+}
+
+.top-left-logo {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    margin-left: 25px;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------------------------------- MENU KANAN ------------------------------------------------------------------------------------------- */
+nav.navbar {
+    outline-style: solid;
+    outline-color: gray ;
+}
+
+.navbar .menu {
+    /* float: right;
+    margin-right: 130px ;
+    padding: 20px; */
+    
+    float: right;
+    margin-right: 130px;
+    background-color: #fff; /* Warna latar belakang menu */
+    border: 1px solid #ccc; /* Garis di sekitar menu */
+    border-radius: 15px; /* Radius sudut garis */
+    overflow: hidden; /* Sembunyikan bagian yang melebihi batas */
+    margin-top : 15px;
+    margin-bottom: 20px;
+}
+
+.navbar .menu ul {
+    list-style: none; /* Hilangkan bullet point pada list */
+    display: flex; /* Atur elemen list menjadi baris */
+    justify-content: space-around; /* Ratakan jarak antar elemen */
+}
+
+.navbar .menu li {
+    flex: 2 ; /* Buat lebar setiap item sama */
+    text-align: center; /* Rata tengah teks */
+}
+
+.navbar .menu li a {
+    display: block; /* Buat link memenuhi seluruh area item */
+    padding: 10px 10px 10px 10px; /* Tambahkan padding pada link */
+    text-decoration: none; /* Hilangkan underline pada link */
+    color: #333; /* Warna teks link */
+    font-size: smaller;
+    white-space: nowrap; /* single-line text*/
+    text-overflow: ellipsis; /* single-line text*/
+    box-sizing: initial;
+    width: 100px;
+}
+
+nav li:not(:last-child) { /* Kecuali elemen terakhir */
+    border-right: 1px solid #ccc; /* Tambahkan garis pemisah */
+  }
+
+.navbar a:hover {
+    background-color: #f1f1f1;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* header */
+.header {
+    text-align: center;
+}
+
+.pembuka {
+    display: flex;
+    flex-direction: row;
+}
+
+.pengantar {
+    width: 60%;
+}
+
+.form-container {
+    width: 40%;
+}
+

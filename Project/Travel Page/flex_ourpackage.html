@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Flex</title>
+
+ <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+    .container-gallery {
+      /* display: grid;
+      grid-auto-flow: column; */
+
+
+    }
+
+    .gallery {
+      /* display: flex;
+      flex-wrap: wrap; 
+      gap: 10px; 
+      flex-direction: column; */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom dengan lebar yang sama */
+      grid-auto-rows: minmax(100px, auto); /* Mengatur tinggi baris secara otomatis, minimal 100px */
+      gap: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 768px) { /* Sesuaikan breakpoint sesuai kebutuhan */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Mengubah menjadi 2 kolom */
+  }
+}
+
+  @media (max-width: 576px) {
+    .gallery {
+      grid-template-columns: 1fr; /* Menjadi 1 kolom */
+    }
+  }
+    .package-item {
+      display: flex;  
+      flex-direction: row;
+      gap: 10px;
+
+    }
+    
+    .box {
+      background-color: lightcoral;
+      padding: 20px;
+      text-align: center;
+      flex: 1 1;   
+      padding: 50px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+    }
+
+      .circle_logo {
+      height: 25px;
+      width: 25px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 1px;
+      overflow: hidden;
+    }
+
+    .text_package {
+
+    }
+
+    img.logo {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    hr {
+      border: 1px solid ;
+      width: 100px;
+      border-radius: 10px;
+      color: #EDF0F4;
+    }
+
+    
+
+
+    </style>
+</head>
+<body>
+  <div class="container-gallery"> 
+
+    <div class="gallery">
+          <div class="box">
+            <div class="circle_logo">
+              <img class="logo" src="c:\Users\User\Downloads\logo\lamp-35376.png">
+            </div>
+            <div class="text_package">test</div>
+          </div>
+          <div class="box">
+            <div class="circle_logo">
+              <img class="logo" src="c:\Users\User\Downloads\logo\lamp-35376.png">
+            </div>
+            <div class="text_package"></div>
+          </div>
+          <div class="box">
+            <div class="circle_logo">
+              <img class="logo" src="c:\Users\User\Downloads\logo\lamp-35376.png">
+            </div>
+            <div class="text_package"></div>
+          </div>
+          <div class="box">
+            <div class="circle_logo">
+              <img class="logo" src="c:\Users\User\Downloads\logo\lamp-35376.png">
+            </div>
+            <div class="text_package"></div>
+          </div>
+          <div class="box">
+            <div class="circle_logo">
+              <img class="logo" src="c:\Users\User\Downloads\logo\lamp-35376.png">
+            </div>
+            <div class="text_package"></div>
+          </div>
+          <div class="box">
+            <div class="circle_logo">
+              <img class="logo" src="c:\Users\User\Downloads\logo\lamp-35376.png">
+            </div>
+            <div class="text_package"></div>
+          </div>
+      </div>
+      
+  </div>
+
+  </div>
+
+
+</body>
+</html>
